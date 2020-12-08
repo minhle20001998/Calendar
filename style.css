@@ -14,11 +14,49 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
-  width: 100%;
-  height: 100vh;
+  width: 75%;
+  height: 777px;
   background-color: #240d0048;
   color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-board {
+  width: 25%;
+  height: 777px;
+}
+
+.board-header {
+  border: 1px solid black;
+  height: 80px;
+  background-color: #361515;
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-content {
+  padding: 1.5rem 1rem;
+  height: 618px;
+  background: #e9e9e9;
+}
+
+.board-footer {
+  border: 1px solid black;
+  height: 80px;
+  background-color: #361515;
+  color: white;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +109,7 @@ html {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  width: calc(60rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +126,7 @@ html {
 
   font-size: 1.6rem;
   margin: 0.3rem;
-  width: calc(40.2rem / 7);
+  width: calc(40rem / 7);
   display: flex;
   height: 5rem;
   justify-content: center;
@@ -110,4 +148,129 @@ html {
 .today {
   background-color: #361515;
   color: #ffffff !important;
+}
+
+.edit_form {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  background-color: #1e262c4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_table {
+  width: 30rem;
+  height: 35rem;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  background-color: white;
+  z-index: 2000;
+}
+
+.edit_header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: #1e262c;
+}
+
+.edit_header button {
+  position: absolute;
+  right: 0;
+  top: -1rem;
+}
+.edit_header p {
+  font-size: 1.5rem;
+}
+.edit_body {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.invalid {
+  margin-top: 0.5rem;
+  color: red;
+  font-size: 1rem;
+  display: none;
+}
+
+.edit_body p {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.edit_body p span {
+  color: red;
+}
+
+.edit_body .form_group {
+  margin: none;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 1rem 0 0;
+  margin: 0.5rem 0 2rem 0;
+}
+.edit_body .form_group textarea {
+  font-family: sans-serif;
+  width: 100%;
+  height: 10rem;
+  resize: none;
+}
+
+.edit_body .form_group textarea:focus {
+  outline: none;
+}
+
+.edit_body .form_group textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+.edit_body .form_group textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.edit_body .form_group textarea::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #361515;
+  border-radius: 10px;
+}
+
+.edit_body .form_group textarea::-webkit-scrollbar-thumb:hover {
+  background: #863535;
+}
+
+.edit_body .form_group input {
+  font-family: sans-serif;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+.edit_body .form_group input:focus {
+  outline: none;
+}
+.edit_body .form_group .ID_input {
+  background-color: rgb(241, 241, 241);
+}
+
+.edit_table .save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+.edit_table .save button {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #1e262c;
+  color: white;
+  font-size: 1rem;
 }

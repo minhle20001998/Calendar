@@ -16,9 +16,37 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <script src="scrypt.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="edit_form">
+      <div class="edit_table">
+        <div class="edit_header">
+          <p>Add Note</p>
+        </div>
+
+        <div class="edit_body">
+          <div class="form_group">
+            <p class="label">
+              Title
+              <span class="require">*</span>
+            </p>
+            <input class="name_input" type="text" placeholder="1-30 kí tự" />
+          </div>
+
+          <div class="form_group">
+            <p class="label">
+              Note
+              <span class="require">*</span>
+            </p>
+            <textarea id="content">a</textarea>
+          </div>
+        </div>
+        <div class="invalid">
+          <p></p>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="calender">
         <div class="month">
@@ -40,6 +68,12 @@
         </div>
         <div class="days"></div>
       </div>
+    </div>
+
+    <div class="note-board">
+      <div class="board-header">Notes</div>
+      <div class="board-content">Content</div>
+      <div class="board-footer">Footer</div>
     </div>
   </body>
 </html>

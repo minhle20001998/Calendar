@@ -1,7 +1,5 @@
 const date = new Date();
 
-
-
 const renderCalendar = () => {
     date.setDate(1);
     const firstDayIndex = date.getDay();
@@ -41,7 +39,7 @@ const renderCalendar = () => {
             days += `<div class="today">${i}</div>`
 
         } else {
-            days += `<div>${i}</div>`
+            days += `<div class = "day">${i}</div>`
         }
         monthDays.innerHTML = days;
     }
@@ -51,21 +49,43 @@ const renderCalendar = () => {
         monthDays.innerHTML = days;
     }
 }
-renderCalendar();
 
-const prev = document.querySelector('.prev')
-prev.addEventListener('click', () => {
 
-    date.setMonth(date.getMonth() - 1);
+
+main();
+function main() {
     renderCalendar();
+    const prev = document.querySelector('.prev')
+    prev.addEventListener('click', () => {
 
-})
-const next = document.querySelector('.next')
-next.addEventListener('click', () => {
-    date.setMonth(date.getMonth() + 1);
-    renderCalendar();
+        date.setMonth(date.getMonth() - 1);
+        renderCalendar();
 
-})
+    })
+    const next = document.querySelector('.next')
+    next.addEventListener('click', () => {
+        date.setMonth(date.getMonth() + 1);
+        renderCalendar();
+
+    })
+    const days = document.querySelectorAll(".day");
+    days.forEach(element => {
+        element.addEventListener('click', handleDaysClick);
+    });
+
+}
+
+
+function handleDaysClick(event) {
+    const target = event.currentTarget;
+    console.log(target);
+}
+
+
+
+
+
+
 
 
 
