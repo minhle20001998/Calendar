@@ -46,9 +46,30 @@ body {
 }
 
 .board-content {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 0 1rem;
   height: 618px;
   background: #e9e9e9;
+}
+.board-content .notes {
+  height: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.board-content .notes::-webkit-scrollbar {
+  width: 5px;
+}
+
+.board-content .notes::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.board-content .notes::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #361515;
+  border-radius: 10px;
 }
 
 .board-footer {
@@ -158,19 +179,42 @@ body {
   left: 0;
   z-index: 1500;
   background-color: #1e262c4d;
-  display: flex;
+  /*  */
+  display: none;
   justify-content: center;
   align-items: center;
 }
 
 .edit_table {
+  position: relative;
   width: 30rem;
-  height: 35rem;
+  height: 38rem;
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
   background-color: white;
   z-index: 2000;
 }
+.edit_table .exit {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  cursor: pointer;
+}
 
+.edit_table .submit_box {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_table .submit_box .submit {
+  border: none;
+  background-color: #361515;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
 .edit_header {
   display: flex;
   position: relative;
@@ -179,25 +223,19 @@ body {
   color: #1e262c;
 }
 
-.edit_header button {
-  position: absolute;
-  right: 0;
-  top: -1rem;
-}
 .edit_header p {
   font-size: 1.5rem;
 }
+
 .edit_body {
-  margin-top: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 .invalid {
-  margin-top: 0.5rem;
+  height: 2.5rem;
   color: red;
   font-size: 1rem;
-  display: none;
 }
 
 .edit_body p {
@@ -218,7 +256,7 @@ body {
 .edit_body .form_group textarea {
   font-family: sans-serif;
   width: 100%;
-  height: 10rem;
+  height: 12rem;
   resize: none;
 }
 
@@ -234,7 +272,6 @@ body {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-
 .edit_body .form_group textarea::-webkit-scrollbar-thumb {
   cursor: pointer;
   background: #361515;

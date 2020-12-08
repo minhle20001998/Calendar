@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="note.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -16,6 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <script src="note.js"></script>
+    <script src="validate.js"></script>
+    <script src="time_extract.js"></script>
+    <script src="form.js"></script>
+    <script src="handle.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -23,6 +29,12 @@
       <div class="edit_table">
         <div class="edit_header">
           <p>Add Note</p>
+        </div>
+
+        <!-- <div class="exit"><i class="far fa-times-circle"></i></div> -->
+
+        <div class="invalid">
+          <p></p>
         </div>
 
         <div class="edit_body">
@@ -39,21 +51,23 @@
               Note
               <span class="require">*</span>
             </p>
-            <textarea id="content">a</textarea>
+            <textarea id="content"></textarea>
           </div>
         </div>
-        <div class="invalid">
-          <p></p>
-        </div>
+
+        <!-- <div class="submit_box">
+          <button class="submit">Submit</button>
+        </div> -->
       </div>
     </div>
+
     <div class="container">
       <div class="calender">
         <div class="month">
           <i class="fas fa-angle-left prev"></i>
           <div class="date">
-            <h1>December</h1>
-            <p>December 1, 2020</p>
+            <h1 id="month"></h1>
+            <p id="full_date"></p>
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
@@ -72,7 +86,39 @@
 
     <div class="note-board">
       <div class="board-header">Notes</div>
-      <div class="board-content">Content</div>
+      <div class="board-content">
+        <div class="notes">
+          <!--  -->
+          <!-- <div class="note" id="title">
+            <div class="note_header">
+              <div class="left_side">
+                <div id="note_title">Title</div>
+                <div id="note_date">24-09-2000</div>
+              </div>
+              <div class="right_side">
+                <div class="icon_detail">
+                  <i class="far fa-edit edit_icon"></i>
+                </div>
+                <div class="icon_detail">
+                  <i class="fas fa-stopwatch watch_icon"></i>
+                </div>
+                <div class="icon_detail">
+                  <i class="far fa-trash-alt trash_icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="note_content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                recusandae iure commodi accusantium id amet quae quasi
+                blanditiis sunt ad, repellendus facere inventore. Excepturi
+                doloribus tempora obcaecati rerum debitis sunt!
+              </p>
+            </div>
+          </div> -->
+          <!--  -->
+        </div>
+      </div>
       <div class="board-footer">Footer</div>
     </div>
   </body>

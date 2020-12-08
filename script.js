@@ -73,13 +73,11 @@ function main() {
         element.addEventListener('click', handleDaysClick);
     });
 
+    displayNote();
 }
 
 
-function handleDaysClick(event) {
-    const target = event.currentTarget;
-    console.log(target);
-}
+
 
 
 

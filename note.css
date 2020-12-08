@@ -1,0 +1,41 @@
+.note {
+  margin-bottom: 1rem;
+}
+
+.note_header {
+  background-color: #220d0d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.left_side #note_date {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-size: 1.2rem;
+}
+.right_side {
+  display: flex;
+  flex-direction: row;
+}
+.right_side i {
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+.note_content {
+  padding: 1rem 0.5rem;
+  background-color: rgb(221, 221, 221);
+  border: 2px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.note_content p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
