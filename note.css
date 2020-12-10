@@ -15,7 +15,7 @@
 .left_side #note_date {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .right_side {
   display: flex;
@@ -38,4 +38,30 @@
     "Lucida Sans", Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 2rem;
+}
+
+.noted {
+  position: relative;
+  background-color: rgb(192, 192, 192);
+  border: 2px solid rgb(185, 0, 0);
+}
+
+.note_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(185, 0, 0);
+}
+
+.add_note {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid black;
+  box-shadow: 1px 1px 15px black;
 }

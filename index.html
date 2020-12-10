@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calender</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="note.css" />
     <link
@@ -17,12 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <script src="note.js"></script>
-    <script src="validate.js"></script>
-    <script src="time_extract.js"></script>
-    <script src="form.js"></script>
-    <script src="handle.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="./javascript/global-var.js" defer></script>
+    <script src="./javascript/note.js" defer></script>
+    <script src="./javascript/validate.js" defer></script>
+    <script src="./javascript/time_extract.js" defer></script>
+    <script src="./javascript/form.js" defer></script>
+    <script src="./javascript/handle.js" defer></script>
+    <script src="./javascript/script.js" defer></script>
   </head>
   <body>
     <div class="edit_form">
@@ -67,7 +68,7 @@
           <i class="fas fa-angle-left prev"></i>
           <div class="date">
             <h1 id="month"></h1>
-            <p id="full_date"></p>
+            <p id="full_year"></p>
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
@@ -85,7 +86,10 @@
     </div>
 
     <div class="note-board">
-      <div class="board-header">Notes</div>
+      <div class="board-header">
+        <p>Notes</p>
+        <i class="far fa-calendar-plus add_note"></i>
+      </div>
       <div class="board-content">
         <div class="notes">
           <!--  -->

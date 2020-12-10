@@ -20,11 +20,8 @@ function extract_time(target) {
     const month = months[document.querySelector('#month').textContent];
 
     //
-    const fullDate = document.querySelector('#full_date').textContent;
-    console.log(fullDate);
-    const yearArray = fullDate.split(" ");
-    //
-    const year = yearArray[yearArray.length - 1];
+    const year = document.querySelector('#full_year').textContent;
+
 
     return {
         "day": day,

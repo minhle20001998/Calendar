@@ -43,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .board-content {
@@ -144,7 +145,6 @@ body {
 }
 .days div {
   color: black;
-
   font-size: 1.6rem;
   margin: 0.3rem;
   width: calc(40rem / 7);
@@ -155,6 +155,8 @@ body {
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
+
 
 .days div:hover:not(.today) {
   background-color: #b8b8b8;
@@ -167,7 +169,7 @@ body {
 }
 
 .today {
-  background-color: #361515;
+  background-color: #361515 !important;
   color: #ffffff !important;
 }
 
